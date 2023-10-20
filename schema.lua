@@ -9,8 +9,12 @@ return {
             config = {
                 type = "record",
                 fields = {
-                    { whitelist = { type = "array", required = false } },
-                    { blacklist = { type = "array", required = false } },
+                    { whitelist = { type = "array", required = false, elements = {
+                type = "string"
+              } } },
+                    { blacklist = { type = "array", required = false, elements = {
+                type = "string"
+              }, } },
                     { userinfo_header_name = { type = "string", required = false, default = "x-userinfo" } }
                 },
                 entity_checks = {
